@@ -38,3 +38,5 @@ print("No of elements are", len(mylist))
 
 mylist[0]= 'veronica'
 print(mylist)
+
+# concatinating
