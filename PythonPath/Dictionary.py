@@ -35,3 +35,6 @@ print("converting a dictionary to a list", mylist)
 # No of elements are
 
 print("No of elements are", len(mylist))
+
+mylist[0]= 'veronica'
+print(mylist)
