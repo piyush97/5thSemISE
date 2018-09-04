@@ -5,15 +5,15 @@ mydictionary1 = {
 }
 
 mydictionary2 = {
-    "name": "Piyush",
-     "identity": "Student",
-     "age": 20 ,
+    "name": "Weatherbee",
+     "identity": "Principal",
+     "age": 52 ,
 }
 
 mydictionary3 = {
-    "name": "hello",
-     "identity": "Student",
-     "age": 27
+    "name": "MGrundy",
+     "identity": "Teacher",
+     "age": 51
 }
 
 print(mydictionary1)
