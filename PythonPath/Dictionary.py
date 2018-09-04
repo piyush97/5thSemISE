@@ -24,15 +24,14 @@ print(mydictionary3)
 key1 = mydictionary1['name']
 key2 = mydictionary2['name']
 key3 = mydictionary3['name']
-
-print('key1: ',key1,' key2:', key2, ' key3:', key3)
+mylist = [key1, key2, key3];
 
 
 
 # Converting dictionary to list
 
-print('Converting dictionary1 to a list :',[(k,v) for k,v in mydictionary1.items()])
-print('Converting dictionary2 to a list :',[(k,v) for k,v in mydictionary2.items()])
-print('Converting dictionary3 to a list :',[(k,v) for k,v in mydictionary3.items()])
+print("converting a dictionary to a list", mylist)
 
-# Printing # of the elements
+# No of elements are
+
+print("No of elements are", len(mylist))
