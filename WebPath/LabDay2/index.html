@@ -9,10 +9,21 @@
 <br><input name='USN' type='text'  pattern="1MS16IS+[0-9]{3}" />
 <br>
 <placeholder>Name</placeholder> <br>
-<input type="text" name='name' />
+<input type="text" name='name' type='string' pattern="[a-zA-Z]{1000}"/>
 <br>
 <placeholder>SL</placeholder> <br>
-<input type="text" name='sl' />
+<input type="number" name='sl' id='hello' onchange="(function(){console.log(document.getElementById('hello').value);
+if(document.getElementById('hello').value >= 50 )
+document.getElementById('changeee').innerHTML = 'A'
+else
+document.getElementById('changeee').innerHTML = 'Fail'
+
+})()"
+ />
+ <p id='changeee'></p>
+<script>
+
+</script>
 <br>
   <button type='submit'>Submit</button>
 </form>
