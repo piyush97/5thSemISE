@@ -75,4 +75,10 @@ VALUES(6,
 SELECT *
 FROM employee
 
- -- Made with love by Piyush Mehta
+-- Updating old enteries
+
+UPDATE employee
+SET dept_name
+WHERE name="Piyush";
+
+-- Made with love by Piyush Mehta
