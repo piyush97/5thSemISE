@@ -18,10 +18,10 @@ def atomicDictionary():
 
     # Add elements into the dicitonary by interacting with user
     while answer == 'y' or answer == 'Y':
-        key = raw_input("Enter the atomic symbol: \t")
-        value = raw_input("Enter the atom Name: \t")
+        key = input("Enter the atomic symbol: \t")
+        value = input("Enter the atom Name: \t")
         atomicElements[key] = value
-        answer = raw_input("Do you want to enter elements Y or N")
+        answer = input("Do you want to enter elements Y or N")
 
     print(atomicElements)
 
@@ -29,11 +29,11 @@ def atomicDictionary():
 
     # Search for the element that the user gives
     search = " "
-    search = raw_input("Enter the key symbol to search for")
+    search = input("Enter the key symbol to search for")
 
     if search in atomicElements:
         print("Yes element %s exists", search)
-        print("Its value is %s", atomicElements[search])
+        print("Its value is ", atomicElements[search])
     else:
         print("Element not found")
 atomicDictionary()
