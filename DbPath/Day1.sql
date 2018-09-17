@@ -62,4 +62,17 @@ WHERE name = "Piyush";
 
 ALTER TABLE employee ADD dept_name varchar2(20);
 
--- Made with love by Piyush Mehta
+-- Inserting with new VALUES
+
+INSERT INTO employee
+VALUES(6,
+       'hello',
+       7,
+       'ISE');
+
+-- Seeing new VALUES
+
+SELECT *
+FROM employee
+
+ -- Made with love by Piyush Mehta
