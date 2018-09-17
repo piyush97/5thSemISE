@@ -89,4 +89,8 @@ WHERE name = 'Piyush';
 
 ALTER TABLE employee MODIFY name varchar(50) NOT NULL;
 
+-- Renaming TABLE
+
+ALTER TABLE employee RENAME TO test;
+
 -- Made with love by Piyush Mehta
