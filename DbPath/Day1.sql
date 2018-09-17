@@ -73,12 +73,16 @@ VALUES(6,
 -- Seeing new VALUES
 
 SELECT *
-FROM employee
-
--- Updating old enteries
+FROM employee -- Updating old enteries
 
 UPDATE employee
 SET dept_name
 WHERE name="Piyush";
+
+--deleting the values of a TABLE
+
+DELETE
+FROM employee
+WHERE name = 'Piyush';
 
 -- Made with love by Piyush Mehta
