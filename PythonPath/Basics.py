@@ -36,4 +36,3 @@ def atomicDictionary():
         print("Its value is ", atomicElements[search])
     else:
         print("Element not found")
-atomicDictionary()
