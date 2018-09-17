@@ -32,8 +32,8 @@ def atomicDictionary():
     search = raw_input("Enter the key symbol to search for")
 
     if search in atomicElements:
-        print("Yes element %s exists", %search)
-        print("Its value is %s", %atomicElements[search])
+        print("Yes element %s exists", search)
+        print("Its value is %s", atomicElements[search])
     else:
         print("Element not found")
-    
+atomicDictionary()
