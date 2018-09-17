@@ -1,8 +1,8 @@
 -- Creating table
 
-CREATE TABLE employee ( ssn integer PRIMARY KEY,
-                                            name varchar2(20),
-                                                 dept_no integer );
+CREATE TABLE employee (ssn integer PRIMARY KEY,
+                                           name varchar2(20),
+                                                dept_no integer);
 
 -- Inserting values
 
@@ -57,5 +57,9 @@ ORDER BY Name;
 SELECT *
 FROM employee
 WHERE name = "Piyush";
+
+-- Altering the TABLE
+
+ALTER TABLE employee ADD dept_name varchar2(20);
 
 -- Made with love by Piyush Mehta
