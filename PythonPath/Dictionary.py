@@ -21,26 +21,25 @@ print(mydictionary2)
 print(mydictionary3)
 
 # show key values
+print("\n Key value of name")
 key1 = mydictionary1['name']
 key2 = mydictionary2['name']
 key3 = mydictionary3['name']
 mylist = [key1, key2, key3];
 
-
-
 # Converting dictionary to list
 
-print("converting a dictionary to a list", mylist)
+print("\nconverting a dictionary to a list", mylist)
 
 # No of elements are
 
-print("No of elements are", len(mylist))
+print("\nNo of elements are", len(mylist))
 
 mylist[0]= 'veronica'
 print(mylist)
 
 # list of list
-
-newListofList = [[]]
-
+print("\nList of List")
+newListofList = [[mydictionary1],[mydictionary2],[mydictionary3]]
+print(newListofList)
 # concatinating
