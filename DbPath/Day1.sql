@@ -85,4 +85,8 @@ DELETE
 FROM employee
 WHERE name = 'Piyush';
 
+-- Modifying datatype
+
+ALTER TABLE employee MODIFY name varchar(50) NOT NULL;
+
 -- Made with love by Piyush Mehta
