@@ -21,4 +21,4 @@ print("Number of occurance of Li is",Occurance3)
 # Printing a List of Occurances
 
 print("List of Occurances\n")
-print([Occurance1,Occurance2,Occurance3])
+print([['N: ', Occurance1],[ 'He: ', Occurance2],[ 'Li: ', Occurance3]])
