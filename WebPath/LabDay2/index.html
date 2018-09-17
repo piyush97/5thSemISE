@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Form Validation</title>
-  </head>
-  <body>
-<form>
-<br><input name='USN' type='text'  pattern="1MS16IS+[0-9]{3}" />
-<br>
-<placeholder>Name</placeholder> <br>
-<input type="text" name='name' type='string' pattern="[a-zA-Z]{1000}"/>
-<br>
-<placeholder>SL</placeholder> <br>
-<input type="number" name='sl' id='hello' onchange="(function(){console.log(document.getElementById('hello').value);
+
+<head>
+  <meta charset="utf-8">
+  <title>Form Validation</title>
+</head>
+
+<body>
+  <form>
+    <br><input name='USN' type='text'  pattern="1MS16IS+[0-9]{3}" />
+    <br>
+    <placeholder>Name</placeholder> <br>
+    <input type="text" name='name' type='string' pattern="[a-zA-Z]{1000}"/>
+    <br>
+    <placeholder>SL</placeholder> <br>
+    <input type="number" name='sl' id='hello' onchange="(function(){console.log(document.getElementById('hello').value);
 if(document.getElementById('hello').value >= 50 )
 document.getElementById('changeee').innerHTML = 'A'
 else
@@ -20,9 +22,10 @@ document.getElementById('changeee').innerHTML = 'Fail'
 
 })()"
  />
- <p id='changeee'></p>
-<br>
-  <button type='submit'>Submit</button>
-</form>
-  </body>
+    <p id='changeee'></p>
+    <br>
+    <button type='submit'>Submit</button>
+  </form>
+</body>
+
 </html>
