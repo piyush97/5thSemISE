@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Menu</title>
-  </head>
-  <body>
-    <h1>Enter the menu items</h1>
-    <form>
-      <input type="number" value='quantity' required>
-      <input type="checkbox" value='' name='menuItems' checked >
-      <input type="checkbox" value='' name='menuItems' >
-      <input type="checkbox" value='' name='menuItems' >
-      <input type="checkbox" value='' name='menuItems' >
-      <input type="checkbox" value='' name='menuItems' >
-      <button onclick="calc()">Calculate Cost</button>
 
-        <script type="text/javascript">
-          calc()
-          {
-            var  
-          }
+<head>
+  <meta charset="utf-8">
+  <title>Menu</title>
+</head>
 
-        </script>
-      <p id='cost'></p>
-    </form>
-  </body>
+<body>
+  <h1>Enter the menu items</h1>
+    <p>Enter the Quantity</p>
+    <input type="number" value='1' required>
+    <br>Mutton
+    <input type="radio" value='199' name='menuItems' checked >
+    <br>Sweets
+    <input type="radio" value='212' name='menuItems' >
+    <br>Halwa
+    <input type="radio" value='234' name='menuItems' >
+    <br>Appetizer
+    <input type="radio" value='454' name='menuItems' >
+    <br>Milk
+    <input type="radio" value='20' name='menuItems' >
+    <script type="text/javascript">
+    function  calc()
+      {
+        var menuItems = document.querySelector('input[name="menuItems"]:checked').value;
+        console.log(menuItems)
+      }
+    </script>
+    <button onclick="calc()">Calculate Cost</button>
+
+
+    <p id='cost'></p>
+</body>
+
 </html>
