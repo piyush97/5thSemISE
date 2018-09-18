@@ -10,18 +10,7 @@
       console.log(operations)
       switch(operations)
       {
-        case 'add':
-        c = a+b;
-        break;
-        case 'sub':
-        c = a-b;
-        break;
-        case 'mul':
-        c = a*b;
-        break;
-        case 'div':
-        c = a/b;
-        break;
+        case 'add': c = a+b; break; case 'sub': c = a-b; break; case 'mul': c = a*b; break; case 'div': if(b==0) { c = 'We don\'t handle divide by zero here' } else { c = a/b; } break;
       }
       document.getElementById("answer").value = c;
     }
@@ -41,7 +30,7 @@ div<input type="radio" class='a' id='div' name='operation' value="div">
   <button onclick="solve()">solve</button>
   <br>
   Answer
-  <input id="answer">
+  <input id="answer" width='200'>
 
 </body>
 
