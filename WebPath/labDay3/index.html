@@ -6,22 +6,24 @@
       var a, b, c;
       a = Number(document.getElementById("first").value);
       b = Number(document.getElementById("second").value);
-      var radios = document.getElementsByName('operation');
-      switch(radios)
+      var operations =  document.querySelector('input[name="operation"]:checked').value;
+      console.log(operations)
+      switch(operations)
       {
         case 'add':
-          c= a + b;
-          break;
+        c = a+b;
+        break;
         case 'sub':
-          c = a - b;
-          break;
+        c = a-b;
+        break;
         case 'mul':
-          c = a * b;
-          break;
+        c = a*b;
+        break;
         case 'div':
-          c = a / b;
-          break;
+        c = a/b;
+        break;
       }
+
       document.getElementById("answer").value = c;
     }
   </script>
@@ -30,13 +32,18 @@
 <body>
   Enter the First number : <input id="first" type="number"><br>
 Enter the Second number: <input id="second" type='number'><br>
-add<input type="radio" class='a' id='add' name='operation'>
-sub<input type="radio" class='a' id='sub' name='operation'>
-mul<input type="radio" class='a' id='mul' name='operation'>
-div<input type="radio" class='a' id='div' name='operation'>
+  <div id='operations'>
+    add<input type="radio" class='a' id='add' name='operation' value="add" checked>
+sub<input type="radio" class='a' id='sub' name='operation' value="sub">
+mul<input type="radio" class='a' id='mul' name='operation' value="mul">
+div<input type="radio" class='a' id='div' name='operation' value="div">
+
+</div>
   <button onclick="solve()">solve</button>
   <br>
   Answer
   <input id="answer">
+
 </body>
+
 </html>
