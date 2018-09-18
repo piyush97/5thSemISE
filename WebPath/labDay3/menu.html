@@ -7,30 +7,33 @@
 </head>
 
 <body>
+  <center style="text-align:center">
   <h1>Enter the menu items</h1>
     <p>Enter the Quantity</p>
-    <input type="number" value='1' required>
-    <br>Mutton
+    <input type="number" value='1' id='quant'>
+    <br>Mutton Price:199
     <input type="radio" value='199' name='menuItems' checked >
-    <br>Sweets
+    <br>Sweets Price:212
     <input type="radio" value='212' name='menuItems' >
-    <br>Halwa
+    <br>Halwa Price:234
     <input type="radio" value='234' name='menuItems' >
-    <br>Appetizer
+    <br>Appetizer Price:454
     <input type="radio" value='454' name='menuItems' >
-    <br>Milk
+    <br>Milk Price:20
     <input type="radio" value='20' name='menuItems' >
     <script type="text/javascript">
     function  calc()
       {
         var menuItems = document.querySelector('input[name="menuItems"]:checked').value;
-        console.log(menuItems)
+        console.log(document.getElementById('quant').value*menuItems);
+        price = parseInt(document.getElementById('quant').value*menuItems);
+        document.getElementById("cost").value = price;
       }
     </script>
+    <br>
     <button onclick="calc()">Calculate Cost</button>
-
-
-    <p id='cost'></p>
+    <input id='cost'>
+  </center>
 </body>
 
 </html>
