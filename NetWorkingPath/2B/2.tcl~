@@ -20,7 +20,7 @@ proc finish {} {
     close $traceFile
     close $namFile
 	exec awk -f stats.awk 2.tr &
-	exec nam 2.nam &
+	#exec nam 2.nam &
     exit 0
 }
 
