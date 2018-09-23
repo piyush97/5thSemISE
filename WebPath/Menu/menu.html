@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<style>
+  body
+{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+p::after
+{
+  color: red;
+}
+</style>
 
 <head>
   <meta charset="utf-8">
-  <title>Menu</title>
+  <title>GrocerHub</title>
 </head>
 
 <body>
-  <center style="text-align:center">
-    <h1>Enter the menu items</h1>
+  <center>
+    <h1 style="color:red;">GrocerHub</h1>
+    <h2>Enter the menu items</h2>
     <p>Enter the Quantity</p>
-    <input type="number" value='1' id='quant'>
+    <!-- Negatives removed and 0 too -->
+    <input type="number" id='quant' required min="1" oninput="validity.valid||(value='');">
+    <p id="exceptions"></p>
     <br>Mutton Price:199
-    <input type="radio" value='199' name='menuItems' checked >
+    <input type="radio" value='199' name='menuItems' checked>
     <br>Sweets Price:212
-    <input type="radio" value='212' name='menuItems' >
+    <input type="radio" value='212' name='menuItems'>
     <br>Halwa Price:234
-    <input type="radio" value='234' name='menuItems' >
+    <input type="radio" value='234' name='menuItems'>
     <br>Appetizer Price:454
-    <input type="radio" value='454' name='menuItems' >
+    <input type="radio" value='454' name='menuItems'>
     <br>Milk Price:20
-    <input type="radio" value='20' name='menuItems' >
+    <input type="radio" value='20' name='menuItems'>
     <script type="text/javascript">
       function calc() {
         var menuItems = document.querySelector('input[name="menuItems"]:checked').value;
         console.log(document.getElementById('quant').value * menuItems);
         price = parseInt(document.getElementById('quant').value * menuItems);
-        document.getElementById("cost").value = price;
+        if (document.getElementById('quant').value == 0 || document.getElementById('quant').value == '-') {
+          document.getElementById("exceptions").innerHTML = ('Enter a VALID quantity please')
+          document.getElementById("exceptions").style.color = "#ff0000"
+        } else {
+          document.getElementById("exceptions").innerHTML = "thanks";
+          document.getElementById("exceptions").style.color = "#008000"
+        }
+        document.getElementById("cost").innerHTML = price;
       }
     </script>
     <br>
     <button onclick="calc()">Calculate Cost</button>
-    <input id='cost'>
-
+    <p id='cost'>
   </center>
 </body>
 
