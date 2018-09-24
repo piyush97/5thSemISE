@@ -1,5 +1,5 @@
 try:
-    f = open('filename', "a")
+    f = open('filename', "r")
     f.write("LionKing")
 except:
     print("Something went wrong")
