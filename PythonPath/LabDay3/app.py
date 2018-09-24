@@ -1,8 +1,9 @@
 class Person:
-    def __init__(self, name, age):
+    # Params __init__(self,vars)
+    def __init__(Piyush, name, age):
 
-        self.name = name;
-        self.age = age;
+        Piyush.name = name;
+        Piyush.age = age;
 
 p1 = Person("suppandi", 14)
 p2 = Person("Ramu", 12)
