@@ -15,3 +15,11 @@ print("\n Name of person #2 is", p2.name);
 print("\n age of person #2 is", p2.age);
 
 p2.age = 10
+
+# Printing after deleting
+
+del p1
+
+# Throws error
+
+print("Name of person after deleting is", p1.name)
