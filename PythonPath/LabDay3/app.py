@@ -22,4 +22,4 @@ del p1
 
 # Throws error
 
-print("Name of person after deleting is", p1.name)
+print("\nName of person after deleting is", p1.name)
