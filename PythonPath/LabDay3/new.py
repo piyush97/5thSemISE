@@ -23,7 +23,3 @@ p1.display()
 print("Displays personCount coz it's public")
 print("PersonCount", Person.personCount)
 print("__secretCount is", Person.__secretCount)
-
-# Throws error
-
-print("\nName of person after deleting is", p1.name)
