@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-  crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <style>
   body
@@ -18,24 +17,33 @@
 
 <body>
   <center>
-    <h1 style="color:red;">GrocerHub</h1>
+    <h1 style="color:white;background-color:black">GrocerHub</h1>
     <h2>Enter the menu items</h2>
     <p>Enter the Quantity</p>
     <!-- Negatives removed and 0 too -->
     <input type="number" id='quant' required min="1" oninput="validity.valid||(value='');">
     <p id="exceptions"></p>
     <br>Pulses Price: 199
-    <input type="radio" value='199' name='menuItems' checked>
+    <input type="radio" value='199' id='1' name='menuItems' checked>
     <br>Sweets Price: 212
-    <input type="radio" value='212' name='menuItems'>
+    <input type="radio" value='212' id="2" name='menuItems'>
     <br>Biscuits Price: 234
-    <input type="radio" value='234' name='menuItems'>
+    <input type="radio" id="3" value='234' name='menuItems'>
     <br>Namkeen Price: 454
-    <input type="radio" value='454' name='menuItems'>
+    <input type="radio" id="4" value='454' name='menuItems'>
     <br>Milk Price: 20
-    <input type="radio" value='20' name='menuItems'>
+    <input type="radio" id="5" value='20' name='menuItems'>
     <script type="text/javascript">
       function calc() {
+        // var a = document.querySelector('input[id="1"]:checked').value;
+        // var b = document.querySelector('input[id="2"]:checked').value;
+        // var c = document.querySelector('input[id="3"]:checked').value;
+        // var d = document.querySelector('input[id="4"]:checked').value;
+        // var e = document.querySelector('input[id="5"]:checked').value;
+        // function add(){
+        // alert(a+b+c+d+e);
+        // }
+        // add();
         var menuItems = document.querySelector('input[name="menuItems"]:checked').value;
         console.log(document.getElementById('quant').value * menuItems);
         price = parseInt(document.getElementById('quant').value * menuItems);
