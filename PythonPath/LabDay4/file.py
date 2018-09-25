@@ -13,3 +13,9 @@ for line in escape:
         print("after adding the new word read %s" %word)
         print("the word %s occurs %d times in dictionar" %(word, wordDic[word]))
 print("\n", wordDic)
+
+search = input("enter search string")
+if search in wordDic:
+    print("\nFound word %s %d times" %(search, wordDic[search]))
+else:
+    print("\nsorry not Found")
