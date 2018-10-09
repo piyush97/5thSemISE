@@ -19,4 +19,4 @@ for x in a:
         print(x)
 
 # Printing reverse list
-print(.reverse())
+print(a.reverse())
