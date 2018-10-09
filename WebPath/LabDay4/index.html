@@ -1,0 +1,94 @@
+<!--Creare a Web Page with a HTML Table having two options "Juice" and "Snacks"
+When Juice is clicked atleast one item with its details and picture must be shown
+When Snacks is clicked atleast one snack with its details and picture must be shown.
+
+The details of the items - juice and snacks are to be stored as JSON objects.
+Use Javascript to handle the client-side events
+
+-->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+  <table>
+    <tr id="menu">
+      <th id="drinks">Juice</th>
+      <th id="snacks">Snacks</th>
+    </tr>
+  </table>
+  <table class="table" id="MenuTable" hidden>
+    <tr>
+      <td id="item1"></td>
+      <td id="item2" </td> <td id="item3" </td> </tr> </table> <script>
+
+        document.getElementById("drinks").addEventListener("click", myFunction2);
+        document.getElementById("snacks").addEventListener("click", myFunction3);
+
+
+        function myFunction2() {
+        var myObj, i, x = " ", y=" ";
+        document.getElementById("MenuTable").removeAttribute('hidden');
+        myObj = {
+        "name":"Strawberry Milk Shake",
+        "image_name": "strawberry",
+        "ingredients":[ "Strawberry", "Milk", "Cherry", "Ice-cream"]
+        };
+
+
+        y = myObj.name;
+        for (i in myObj.ingredients) {
+        x += myObj.ingredients[i] + "&nbsp";
+        }
+
+        z = myObj.image_name;
+        document.getElementById("item1").innerHTML = y;
+        document.getElementById("item2").innerHTML = x;
+        document.getElementById("item3").innerHTML = '<img src="'+z+'.jpeg" />';
+        }
+        function myFunction3() {
+        document.getElementById("MenuTable").removeAttribute('hidden');
+        var myObj, i, x = " ", y=" ";
+        myObj = {
+        "name":"Brownie",
+        "image_name": "brownie",
+        "ingredients":[ "Walnut", "Chocolate", "Cashewnut", "Maida"]
+        };
+
+        y = myObj.name;
+        for (i in myObj.ingredients) {
+        x += myObj.ingredients[i] + "&nbsp";
+        }
+
+        z = myObj.image_name;
+        document.getElementById("item1").innerHTML = y;
+        document.getElementById("item2").innerHTML = x;
+        document.getElementById("item3").innerHTML = '<img src="'+z+'.jpeg" />';
+        }
+        </script>
+
+</body>
+<style>
+  table {
+    text-align: center;
+    width: 100%;
+  }
+
+  td {
+    font-size: xx-large;
+  }
+
+  th {
+    font-size: x-large;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  th:hover {
+    background-color: #8B008B;
+
+  }
+</style>
+
+</html>
