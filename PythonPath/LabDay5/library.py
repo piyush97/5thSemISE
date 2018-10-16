@@ -21,3 +21,5 @@ with open(sys.argv[1]) as file:
     for line in file:
         for word in line.split():
             dict[word] = dict.get(word, 0) + 1
+            
+    print(dict)
