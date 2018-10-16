@@ -1,6 +1,6 @@
 import sys
 import os
-from functools import reduce
+# from functools import reduce
 
 dict = {}
 wordLen = []
@@ -21,4 +21,3 @@ with open(sys.argv[1]) as file:
     for line in file:
         for word in line.split():
             dict[word] = dict.get(word, 0) + 1
-            
