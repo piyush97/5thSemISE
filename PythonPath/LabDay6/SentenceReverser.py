@@ -3,7 +3,7 @@ class SentenceReverser:
     sentence = ''
     reverse = ''
     vowelCount = 0
-    # vowelCountPerPhrase = []
+    vowelCountPerPhrase = []
 
     def __init__(self, sentence):
         self.sentence = sentence
@@ -34,3 +34,5 @@ print(sortedItems[0].getReverse())
 print("Sorted on vowel count (Descending)\n")
 
 for i in range(len(sortedItems)):
+    print("Reverse:", sortedItems[i].getReverse(),
+          "Vowel count: ", sortedItems.getVowelCount())
