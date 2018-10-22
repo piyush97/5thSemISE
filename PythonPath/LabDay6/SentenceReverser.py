@@ -3,7 +3,7 @@ class SentenceReverser:
     sentence = ''
     reverse = ''
     vowelCount = 0
-    vowelCountPerPhrase = []
+    # vowelCountPerPhrase = []
 
     def __init__(self, sentence):
         self.sentence = sentence
