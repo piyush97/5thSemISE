@@ -15,7 +15,7 @@ int checksum(int fl)
     {
         temp = in[i * 2];
         temp = (temp * 256) + in[(i * 2) + 1];
-        sum = sum + temp;
+        sum += temp;
     }
     if (fl == 1)
     {
