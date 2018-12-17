@@ -4,7 +4,7 @@ DECLARE
 	i number;
 	flag number;
 BEGIN
-        n:=&n;
+        n:=12;
         i:=1;
         flag:=0;
         if n=1
