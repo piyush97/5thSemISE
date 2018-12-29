@@ -4,9 +4,6 @@
 #Create a simulator object
 set ns [new Simulator]
 
-$ns color 2 red
-
-
 #Tell the simulator to use static routing
 $ns rtproto Static
 
@@ -20,9 +17,7 @@ $ns namtrace-all $namFile
 
 proc finish {} {
 	global ns namFile traceFile
-    
-    $ns flush-trace
-	
+	$ns flush-trace
 	#Close the trace files
     close $traceFile
     close $namFile
@@ -41,16 +36,6 @@ $ns duplex-link $n(1) $n(2) 0.5Mb 20ms DropTail
 $ns duplex-link $n(2) $n(3) 0.5Mb 20ms DropTail
 $ns queue-limit $n(1) $n(2) 10
 $ns queue-limit $n(2) $n(3) 10
-
-
-#aesthetics
-#source (udp)
-$n(1) shape hexagon 
-$n(1) color red
-#destination (udp)
-$n(3) shape square 
-$n(3) color blue
-
 
 #Create a UDP agent and attach it to node n(1)
 set udp0 [new Agent/UDP]
