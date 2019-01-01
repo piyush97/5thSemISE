@@ -39,4 +39,4 @@ SELECT ssn from assigned_to where ProjectNo = (Select ProjectNo from project whe
 --b
 select count(ssn),deptno from employee group by deptno;
 --c
-UPDATE ASSIGNED_TO SET ProjectNo=20 WHERE SSN between 1 and 20;
+UPDATE ASSIGNED_TO SET ProjectNo=20 WHERE SSN=1;
