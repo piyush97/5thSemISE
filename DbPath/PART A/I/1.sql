@@ -6,8 +6,7 @@
 --Obtain the SSN of employees assigned to database projects.
 --Find the number of employees working in each department
 --Update the ProjectNo of Employee bearing SSN=1 to ProjectNo=20
---
-create table employee(ssn varchar(6),name varchar(10),deptno int, primary key(ssn));
+--create table employee(ssn varchar(6),name varchar(10),deptno int, primary key(ssn));
 
 create table project(projectno varchar(10),projectarea varchar(20),primary key(projectno));
 
@@ -35,11 +34,9 @@ insert into assigned_to values('03','300');
 
 insert into assigned_to values('01','200');
 
+--a
 SELECT ssn from assigned_to where ProjectNo = (Select ProjectNo from project where ProjectArea='database');
-
-
-  select count(ssn),deptno from e group by deptno;
-  
-  update a set projectno='200' where usn='03';
-  
-  select * from a;
+--b
+select count(ssn),deptno from employee group by deptno;
+--c
+UPDATE ASSIGNED_TO SET ProjectNo=20 WHERE SSN between 1 and 20;
