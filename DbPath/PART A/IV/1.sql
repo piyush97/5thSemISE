@@ -30,3 +30,7 @@ insert into shipment values(1,2,12,'2018-10-20');
 insert into shipment values (2,3,122,'2018-12-23');
 
 select wname from warehouse where wno=(select wno from shipment where pno=(select pno from part where colour='red'));
+
+select pno from part where pno=(select pno from shipment where wno=(select wno from warehouse group by wname));
+
+select count(pno) from part where pno=(select pno from shipment where wno=(select wno from warehouse group by wname));
