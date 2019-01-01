@@ -92,3 +92,5 @@ select * from supplier;
 select pno from supply where sno=(select sno from supplier where sname="Ram");
 
 select sname from supplier where sno=(select sno from supply where pno=(select pno from part where pname='bolt'));
+
+delete from part where pname="green";
