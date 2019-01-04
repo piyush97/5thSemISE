@@ -14,7 +14,6 @@ create table part
   primary key(pno)
 );
 
-
 Create table supplier
 (
   sno number(10),
@@ -31,11 +30,9 @@ create table supply
   primary key(pno,sno)
   foreign key
   (pno) references part
-  (pno) on
-  delete cascade, foreign key(sno)
-  references supplier
-  (sno) on
-  delete cascade);
+  foreign key (sno) references
+  supplier
+);
 
   
 insert into part
@@ -90,21 +87,10 @@ from part;
 select *
 from supply ;
 
-select sname, pname
-from supplier, supply, part
-where pname='bolt' AND supply.sno=supplier.sno AND part.pno=supply.pno;
+select * from supplier;
 
-select pno
-from supply
-where sno IN(select sno
-from supplier
-where sname='Ram');
+select pno from supply where sno=(select sno from supplier where sname="Ram");
 
+select sname from supplier where sno=(select sno from supply where pno=(select pno from part where pname='bolt'));
 
-delete from part where colour='green';
-
-select *
-from part;
-
-select *
-from supply;
+delete from part where pname="green";

@@ -65,12 +65,7 @@ FROM SAILOR;
 SELECT *
 FROM BOAT;
 
-
-SELECT BID
-FROM RESERVES
-WHERE SID IN( SELECT SID
-FROM SAILOR
-WHERE SNAME='RAM');
+select bid from boat where bid=(select bid from reserves where sid=(select sid from sailor where sname="RAM"));
 
 
 SELECT BID, SNAME
