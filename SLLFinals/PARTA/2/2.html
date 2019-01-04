@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1> authors and their works</h1>
+  <table id="authortable" border>
+    <th>AUTHORS</th>
+    <th>BOOKTITLE</th>
+    <tr>
+      <td id="author0"></td>
+      <td id="title0"></td>
+    </tr>
+    <tr>
+      <td id="author1"></td>
+      <td id="title1"></td>
+    </tr>
+  </table>
+  <p id="author2"></p>
+  <p id="author3"></p>
+<body>
+</html>
+
+<script>
+  var authors = [{ "author": "ab", "title": "Hello" }, { "author": "cd", "title": "Lorem" }, { "author": "IPSUM", "title": "dorem" }, { "author": "xc", "title": "SM" } ];
+  document.getElementById("author0").innerHTML = authors[0].author;
+  document.getElementById("title0").innerHTML = authors[0].title;
+  document.getElementById("author1").innerHTML = authors[1].author;
+  document.getElementById("title1").innerHTML = authors[1].title;
+  document.getElementById("author2").innerHTML = authors[2].author;
+  document.getElementById("author3").innerHTML = authors[3].author;
+</script>
