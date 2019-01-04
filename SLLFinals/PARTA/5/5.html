@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <table border>
+    <th>
+      Name
+    </th>
+    <th>
+      Native Country
+    </th>
+    <th>
+      Story Title
+    </th>
+    <th>
+      Publication Year
+    </th>
+    <tr>
+      <td id="name0"></td>
+      <td id="country0"></td>
+      <td id="story0"></td>
+      <td id="year0"></td>
+    </tr>
+    <tr>
+      <td id="name1"></td>
+      <td id="country1"></td>
+      <td id="story1"></td>
+      <td id="year1"></td>
+    </tr>
+  </table>
+<p id="name2"></p>
+<p id="country2"></p>
+<p id="story2"></p>
+<p id="year2"></p>
+<p id="name3"></p>
+<p id="country3"></p>
+<p id="story3"></p>
+<p id="year3"></p>
+</body>
+</html>
+<script>
+var data = [{
+    "name": "Piyush Mehta",
+    "country": "IND",
+    "story": "GoodBye",
+    "year": 2001
+  },
+  {
+    "name": "Mehta Mehta",
+    "country": "IND",
+    "story": "GoodBye",
+    "year": 2002
+  },
+  {
+    "name": "Piyush Mehta",
+    "country": "IND",
+    "story": "GoodBye",
+    "year": 2001
+  },
+  {
+    "name": "Piyush Mehta",
+    "country": "IND",
+    "story": "GoodBye",
+    "year": 2001
+  }
+]
+
+document.getElementById("name0").innerHTML = data[0].name
+document.getElementById("name1").innerHTML = data[1].name
+document.getElementById("name2").innerHTML = data[2].name
+document.getElementById("name3").innerHTML = data[3].name
+document.getElementById("country0").innerHTML = data[0].country
+document.getElementById("country1").innerHTML = data[1].country
+document.getElementById("country2").innerHTML = data[2].country
+document.getElementById("country3").innerHTML = data[3].country
+document.getElementById("story0").innerHTML = data[0].story
+document.getElementById("story1").innerHTML = data[1].story
+document.getElementById("story2").innerHTML = data[2].story
+document.getElementById("story3").innerHTML = data[3].story
+document.getElementById("year0").innerHTML = data[0].year
+document.getElementById("year1").innerHTML = data[1].year
+document.getElementById("year2").innerHTML = data[2].year
+document.getElementById("year3").innerHTML = data[3].year
+</script>
