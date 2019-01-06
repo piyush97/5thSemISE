@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <label>enter a sentence </label>
+  <textarea rows="4" cols="50" id="in1">
+  </textarea>
+  </br>
+  <input type="button" value="get longest word" onclick="longestWord()"></br>
+  <p>longest word(s) :
+    <p id="res"></p>
+  </p>
+  <script>
+    function longestWord() {
+      var val = document.getElementById("in1").value.split(' ');
+      var maxi = val[0];
+      val.forEach(function (v) {
+        if (v.length > maxi.length) 
+          maxi = v;
+      });
+      var p = "";
+      for (i = 0; i < val.length; i++) {
+        if (val[i].length == maxi.length)
+          p = p + " " + val[i];
+      }
+      document.getElementById("res").innerHTML = p + ' length is: ' + maxi.length;
+    }
+  </script>
+</body>
+</html>
