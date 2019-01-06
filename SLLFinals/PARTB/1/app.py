@@ -5,7 +5,7 @@ def FarToCel(far):
   TempData.append(data)
   print("From F to C is", data)
 def celToFar(cel):
-  far = cel * 1.8 * 32 
+  far = (cel * 9/5) + 32 
   data = (cel, far)
   TempData.append(data)
   print("From C to F is", data)
