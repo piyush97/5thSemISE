@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <style>
+    th {
+    font-size: x-large;
+    background-color: #4CAF50;
+    color: white;
+  }
+  th:hover{
+    background-color: #8B008B;
+  }
+  table {
+    text-align: center;
+    width: 100%;
+  }
+</style>
+</head>
+
+<body>
+  <table id="table1" border="1">
+    <tr>
+      <th id="head1" onmouseover="car1()">Car 1</th>
+      <th id="head2" onmouseover="car2()">Car 2</th>
+      <th id="head3" onmouseover="car3()">Car 3</th>
+    </tr>
+  </table>
+  <br><br><br>
+  <label id="label1" > Car Generally looks like below:</label>
+  <br><br><br>
+  <label id="image1" onmouseover="ImgHover(0)"></label>
+  <label id="image2" onmouseover="ImgHover(1)"></label>
+  <label id="image3" onmouseover="ImgHover(2)"></label>
+  <br><br><br>
+  <div id="div">
+    <label id="name1" hidden></label>
+    <label id="name2"hidden></label>
+    <label id="name3"hidden></label>
+  </div>
+</body>
+<script type="text/javascript" src="cars.json"></script>
+<script type="text/javascript">
+  function car1() {
+    var car1Data = [{
+      "name": "Tesla",
+      "model": 2002
+    }]
+    document.getElementById("name1").innerHTML = car1Data[0].name    
+document.getElementById("name1").removeAttribute("hidden")
+    document.getElementById("name1").removeAttribute("hidden")
+    document.getElementById("name2").setAttribute("hidden", true)
+    document.getElementById("name3").setAttribute("hidden", true)
+
+  }
+  function car2() {
+      var car2Data = [{
+        "name": "Jaguar",
+        "model": 2002
+      }]
+      document.getElementById("name2").innerHTML = car2Data[0].name
+// document.getElementById("name2").getAttribute(hidden:true)
+
+    document.getElementById("name2").removeAttribute("hidden")
+    document.getElementById("name1").setAttribute("hidden",true)
+    document.getElementById("name3").setAttribute("hidden", true)
+    }
+   function car3() {
+      var car3Data = [{
+        "name": "Porsche",
+        "model": 2002
+      }]
+      document.getElementById("name3").innerHTML = car3Data[0].name
+// document.getElementById("name2").getAttribute(hidden:true)
+document.getElementById("name3").removeAttribute("hidden")
+document.getElementById("name1").setAttribute("hidden",true)
+document.getElementById("name2").setAttribute("hidden", true)
+document.getElementById("name3").removeAttribute("hidden")
+
+
+    }
+</script>
+
+</html>
